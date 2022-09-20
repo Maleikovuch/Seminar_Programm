@@ -51,7 +51,7 @@
 
 // 3. Вариант
 
-string number = Console.ReadLine();
+String number = Console.ReadLine();
 if (number == "1")
 {
     Console.WriteLine("Понедельник");
