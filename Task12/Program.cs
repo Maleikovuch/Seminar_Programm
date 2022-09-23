@@ -10,10 +10,9 @@ int result = a % b;
 // else
 //     Console.WriteLine($"Нет, первое число {a} не кратно второму {b}. Остаток от деления = {result}");
 
-string Different(int na, int nb)
+void Different(int na, int nb)
 {
-    if ((na % nb) == 0) return $"Да, число {na} кратно числу {nb}";
-    else return $"Нет, число {na} не кратно числу {nb}. Остаток от деления - {result}";
+    if ((na % nb) == 0) Console.WriteLine($"Да, число {na} кратно числу {nb}");
+    else Console.WriteLine($"Нет, число {na} не кратно числу {nb}. Остаток от деления - {result}");
 }
-string res = Different(a, b);
-Console.WriteLine(res);
+Different(a,b);
