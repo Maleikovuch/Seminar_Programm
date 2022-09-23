@@ -12,8 +12,8 @@ int result = a % b;
 
 string Different(int na, int nb)
 {
-    if ((na % nb) == 0) return $"Да число {na} кратно числу {nb}";
-    else return $"Нет число {na} не кратно числу {nb}. Остаток от деления - {result}";
+    if ((na % nb) == 0) return $"Да, число {na} кратно числу {nb}";
+    else return $"Нет, число {na} не кратно числу {nb}. Остаток от деления - {result}";
 }
 string res = Different(a, b);
 Console.WriteLine(res);

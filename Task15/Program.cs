@@ -7,14 +7,13 @@
 Console.WriteLine("Введите цифру, обозначающую день недели и узнаете явялется ли этот день выходным: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-// string Week(int num)
-// {
-//     if (number < 1 || number > 8)  return "Такого дня недели не существует";
-//     if (number == 7 || number == 8) return "Этот день выходной"; 
-//     else return"Этот день не выходной";
-// }
-// string result = Week(number);
-// Console.WriteLine(result);
+void Week(int num)
+{
+    if (number < 1 || number > 8)  Console.WriteLine("Такого дня недели не существует");
+    else if (number == 7 || number == 8) Console.WriteLine("Этот день выходной"); 
+    else Console.WriteLine("Этот день не выходной");
+}
+Week(number);
 
 // switch (number)
 // {
