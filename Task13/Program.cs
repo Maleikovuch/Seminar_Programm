@@ -5,7 +5,8 @@ int number = Convert.ToInt32(Console.ReadLine());
 int ShowThirdDigit(int num)
 {
    if(num < 100) return -1;
-   while (num >= 1000) num = num / 10; return num % 10;
+   while (num >= 1000) num = num / 10;
+   return num % 10;
 }
 
 int showThirdDigit = ShowThirdDigit(number);

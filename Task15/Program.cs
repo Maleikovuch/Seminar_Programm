@@ -9,8 +9,8 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 void Week(int num)
 {
-    if (number < 1 || number > 8)  Console.WriteLine("Такого дня недели не существует");
-    else if (number == 7 || number == 8) Console.WriteLine("Этот день выходной"); 
+    if (number < 1 || number > 7)  Console.WriteLine("Такого дня недели не существует");
+    else if (number == 6 || number == 7) Console.WriteLine("Этот день выходной"); 
     else Console.WriteLine("Этот день не выходной");
 }
 Week(number);
