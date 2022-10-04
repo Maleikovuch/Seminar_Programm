@@ -9,7 +9,7 @@ double[] CreateNewArrayRndDouble(int size, int min, int max)
     var rnd = new Random();
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.NextDouble() * (max - min) + min; 
+        array[i] = Math.Round(rnd.NextDouble() * (max - min) + min, 1, MidpointRounding.ToZero); 
     }
     return array;
 }
@@ -39,10 +39,10 @@ double DifferenceMaxMin(double[] array)
     return dif;
 }
 
-double[] arr = CreateNewArrayRndDouble(10, 10, 100);
+double[] arr = CreateNewArrayRndDouble(10, 1, 100);
 PrintArray(arr);
 
 double diffMaxMin = DifferenceMaxMin(arr);
 double difMX = Math.Round(diffMaxMin, 1, MidpointRounding.ToZero);
-Console.WriteLine($"Разница между максимальным и минимальным элементов массива = {difMX}");
+Console.WriteLine($"Разница между максимальным и минимальным элементами массива = {difMX}");
 
