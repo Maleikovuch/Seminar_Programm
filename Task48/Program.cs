@@ -36,5 +36,5 @@ void PrintMatrix(int[,] matrix)
 
 }
 
-int[,] array2D = CreateMatrixInt(3,4,-80,80);
+int[,] array2D = CreateMatrixSumIndex(3,4,-80,80);
 PrintMatrix(array2D);
