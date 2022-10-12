@@ -7,20 +7,23 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-int rows = 3;
-int columns = 4;
 
-int[,] matrix = new int[rows, columns];
-var rnd = new Random();
 
-for (int i = 0; i < matrix.GetLength(0); i++)
+int[,] CreateMatrixInt(int rows, int columns, int min, int max)
 {
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
-        matrix[i, j] = rnd.Next(1, 10);
-    }
-}
+    int[,] matrix = new int[rows, columns];
+    var rnd = new Random();
 
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = rnd.Next(min, max + 1);
+        }
+    }
+    return matrix;
+
+}
 
 void PrintMatrix(int[,] matrix)
 {
@@ -38,20 +41,22 @@ void PrintMatrix(int[,] matrix)
 
 }
 
-PrintMatrix(matrix);
 
-double[] findAverageElementsColumns = new double[matrix.GetLength(1)];
-for (int j = 0; j < matrix.GetLength(1); j++)
+double[] FindAverageElementsColumns(int[,] matrix)
 {
-    double sum = 0;
-
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    double[] findAverageElementsColumns = new double[matrix.GetLength(1)];
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        sum = sum + matrix[i, j];
-    }
-    findAverageElementsColumns[j] = Math.Round(sum / matrix.GetLength(0), 1, MidpointRounding.ToZero);
-}
+        double sum = 0;
 
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            sum = sum + matrix[i, j];
+        }
+        findAverageElementsColumns[j] = Math.Round(sum / matrix.GetLength(0), 1, MidpointRounding.ToZero);
+    }
+    return findAverageElementsColumns;
+}
 
 void PrintArray(double[] findAverageElementsColumns)
 {
@@ -62,7 +67,14 @@ void PrintArray(double[] findAverageElementsColumns)
 
 }
 
-PrintArray(findAverageElementsColumns);
+
+
+int[,] arr = CreateMatrixInt(3, 4, 1, 9);
+PrintMatrix(arr);
+
+double[] arr2 = FindAverageElementsColumns(arr);
+
+PrintArray(arr2);
 
 
 
