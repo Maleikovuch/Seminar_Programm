@@ -18,7 +18,7 @@ int Square(int num1, int num2)
     // if (num2 == 0) return 1;                                     // сокращенный вариант
     // else return num1 = num1 * Square(num1, num2 - 1);
     
-  return numb2 == 0 ? 1 : numb1 * Square (numb1, numb2-1);    
+  return num1 == 0 ? 1 : num1 * Square (num1, num2-1);    
 }
 
 
