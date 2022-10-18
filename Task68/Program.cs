@@ -9,11 +9,11 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 
 int Akkerman(int num1, int num2)
 {
-    int result = default;
-    if (num1 == 0) return result = num2 + 1;
-    else if (num1 > 0 && num2 == 0) return result = Akkerman(num1 - 1, 1);
-    else if (num1 > 0 && num2 > 0) return result = Akkerman(num1 - 1, Akkerman(num1, num2-1));
-    else return result;
+
+    if (num1 == 0) return num2 + 1;
+    if (num1 > 0 && num2 == 0) return Akkerman(num1 - 1, 1);
+    return Akkerman(num1 - 1, Akkerman(num1, num2 - 1));
+
 }
 
 int akkerman = Akkerman(number1, number2);
