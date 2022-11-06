@@ -9,7 +9,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int SumNumbers(int num)
 {
-    result = num % 10;
+    int result = num % 10;
     if (num != 0) result = result + SumNumbers(num / 10);
     return result;
 }

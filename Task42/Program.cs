@@ -28,8 +28,9 @@ void Converting2(int num)
     string res = default;
     if (num > 0)
     {
-        res += num % 2;
         Converting2(num / 2);
+        res += num % 2;
+        
     }
     Console.Write(res);
 }

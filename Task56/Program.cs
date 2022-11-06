@@ -82,8 +82,8 @@ PrintMatrix(arr);
 Console.WriteLine();
 
 int[,] arr2 = FindRowsMinSumElements(arr);
-// PrintMatrix(arr2);
-// Console.WriteLine();
+PrintMatrix(arr2);
+Console.WriteLine();
 
 int res = ShowIndexRowsMinSum(arr2);
 Console.WriteLine($"Номер строки с наименьшей суммой элементов: {res} строка. ");

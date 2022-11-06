@@ -76,7 +76,7 @@ void PrintMatrixKub(int[,,] matrixKub)
 }
 
 
-int[,,] arr = CreateKubMatrixInt(2, 2, 2, 10, 40);
+int[,,] arr = CreateKubMatrixInt(4, 4, 4, 10, 40);
 
 UniqueElementsMatrix(arr,0,0,0,0,0);
 PrintMatrixKub(arr);
